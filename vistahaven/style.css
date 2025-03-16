@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --primary-color: black;
+  --secondary-color: #6b6b6b;
+  --card-color: #f3f3f3;
+  --green: #66fc75;
+}
+
+body {
+  font-family: "Geist", sans-serif;
+}
+
+.container {
+  padding: 0px 80px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.logo p {
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links li a {
+  font-size: 18px;
+  color: var(--secondary-color);
+  font-weight: 300;
+  transition: all 0.2s linear;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+.contact-us-button {
+  background-color: var(--primary-color);
+  border-radius: 200px;
+  padding: 10px 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.green-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--green);
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.contact-us-button p {
+  font-weight: 300;
+}
+.arrow-icon-container {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-icon-container svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hero-section {
+  background-image: url(https://cdn.prod.website-files.com/6784794885cc7b8dbfb185e2/6784958c2c4ad0bc028ac10a_hero-bg-v4.jpg);
+  border-radius: 30px;
+  background-size: cover;
+  background-position: 80% 50%;
+  padding: 30px 80px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+}
+
+.hero-content {
+  z-index: 100;
+  position: relative;
+  width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 75px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.hero-content > p {
+  font-size: 17px;
+  color: white;
+  font-weight: 300;
+  margin-top: 20px;
+  width: 90%;
+  margin-bottom: 40px;
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid var(--card-color);
+}
+
+.outline p {
+  padding-left: 15px;
+}
+
+.outline .arrow-icon-container {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.w-content {
+  width: max-content;
+}
+
+.hero-info {
+  display: flex;
+  color: white;
+  align-items: center;
+  margin-top: 70px;
+  justify-content: space-between;
+}
+
+.hero-info div p sup {
+  margin-left: -13px;
+}
+
+.hero-info div p {
+  font-size: 50px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.images-badge {
+  display: flex;
+  align-items: center;
+}
+
+.images-badge img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.move-image {
+  transform: translateX(-10px);
+}
+
+.move-image2 {
+  transform: translateX(-20px);
+}
+
+.move-image3 {
+  transform: translateX(-30px);
+}
+
+.rating-info p {
+  font-weight: 600;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.star-container svg {
+  width: 28px;
+}
+
+.star-container {
+  display: flex;
+  color: yellow;
+}
+
+.rating {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding: 20px 20px;
+  border-top-left-radius: 30px;
+}
