@@ -20,19 +20,33 @@
       .blur-light {
         filter: blur(100px);
       }
+
+      .slider {
+        animation: slider 10s linear infinite;
+      }
+
+      @keyframes slider {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
     </style>
   </head>
   <body>
     <div
-      class="flex fixed top-0 left-0 w-full items-center py-[40px] z-[1000000] justify-between px-[50px]"
+      class="flex fixed top-0 left-0 w-full items-center py-[40px] z-[1000000] justify-between xl:px-[50px] lg:px-[30px] px-[20px]"
     >
       <div>
         <img
+          class="xl:w-[150px] w-[100px]"
           src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62323b876e89af400016e3a7_logo.svg"
           alt=""
         />
       </div>
-      <div class="flex items-center gap-4">
+      <div class="lg:flex hidden items-center gap-4">
         <ul class="flex items-center uppercase text-xs font-medium gap-4">
           <li>
             <a href="#">Intro</a>
@@ -53,30 +67,51 @@
           Buy template
         </button>
       </div>
+      <div class="text-secondary lg:hidden block">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+        >
+          <!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE -->
+          <path
+            fill="currentColor"
+            d="M12 16c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2M6 16c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m12 12c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2"
+          />
+        </svg>
+      </div>
     </div>
-    <div class="px-[100px] flex flex-col items-center mt-[150px] gap-[40px]">
-      <h1 class="text-7xl font-bold">Powerful Experience</h1>
-      <p class="text-lg w-[50%] text-center text-secondary">
+    <!-- 1440 -->
+    <div
+      class="xl:px-[100px] lg:px-[50px] px-[20px] flex flex-col items-center mt-[150px] gap-[40px]"
+    >
+      <h1 class="sm:text-7xl text-3xl font-bold">Powerful Experience</h1>
+      <p
+        class="sm:text-lg text-base lg:w-[50%] sm:w-[80%] w-[90%] text-center text-secondary"
+      >
         The total package with which you can build beautiful, high converting
         and professional startup websites that make you stand out.
       </p>
       <button
-        class="bg-primary px-[40px] py-[20px] uppercase text-sm font-bold rounded-xl text-black"
+        class="bg-primary px-[40px] sm:w-max w-full py-[20px] uppercase text-sm font-bold rounded-xl text-black"
       >
         start 10-day free trial
       </button>
       <div class="relative">
         <div
-          class="absolute z-[-1] rounded-full bg-light blur-light w-[800px] h-[500px] left-[50%] translate-x-[-50%]"
+          class="absolute z-[-1] rounded-full bg-light blur-light sm:w-[800px] sm:h-[500px] w-[300px] h-[200px] left-[50%] translate-x-[-50%]"
         ></div>
         <img
-          class="w-full h-auto mt-[60px]"
+          class="w-full h-auto sm:mt-[60px] mt-[30px]"
           src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41fbe7e408f0_home%201%20hero%20product.svg"
           alt=""
         />
       </div>
     </div>
-    <div class="px-[100px] mt-[150px] flex items-center justify-between">
+    <div
+      class="xl:px-[100px] lg:px-[50px] px-[20px] mt-[150px] flex lg:flex-nowrap flex-wrap lg:gap-0 gap-x-16 gap-y-6 items-center justify-between"
+    >
       <img
         src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f412cede408f1_01%20partners%20logo.svg"
         alt=""
@@ -102,11 +137,15 @@
         alt=""
       />
     </div>
-    <div class="px-[100px] mt-[150px]">
-      <h2 class="text-6xl w-[50%] mx-auto text-center font-bold">
+    <div class="xl:px-[100px] lg:px-[50px] px-[20px] mt-[150px]">
+      <h2
+        class="lg:text-6xl sm:text-5xl text-2xl lg:w-[50%] w-[90%] mx-auto text-center font-bold"
+      >
         Supercharge Your Workflow
       </h2>
-      <div class="grid grid-cols-3 gap-8 mt-[100px]">
+      <div
+        class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 sm:mt-[100px] mt-[30px]"
+      >
         <div class="bg-card p-10 rounded-3xl">
           <div
             class="w-[80px] h-[80px] rounded-full flex items-center justify-center bg-[#FFD852]"
@@ -199,11 +238,15 @@
         </div>
       </div>
     </div>
-    <div class="w-full h-[1px] bg-card my-[150px]"></div>
-    <div class="px-[100px] flex items-center gap-[100px]">
-      <div class="w-[50%]">
-        <p class="text-6xl font-bold">Manage and Track Your Projects</p>
-        <p class="mt-7 mb-6 text-lg">
+    <div class="w-full h-[1px] bg-card sm:my-[150px] my-[60px]"></div>
+    <div
+      class="xl:px-[100px] lg:px-[50px] lg:flex-row flex-col px-[20px] flex items-center gap-[100px]"
+    >
+      <div class="lg:w-[50%] sm:w-[80%] w-full">
+        <p class="lg:text-6xl sm:text-4xl text-2xl font-bold">
+          Manage and Track Your Projects
+        </p>
+        <p class="mt-7 mb-6 sm:text-lg text-base">
           Facilisis interdum nec, adipiscing feugiat aliquet pellentesque
           scelerisque augue. Tellus justo pulvinar quam molestie arcu magna
           morbi feugiat.
@@ -232,7 +275,7 @@
           </div>
         </div>
       </div>
-      <div class="w-[50%]">
+      <div class="lg:w-[50%] sm:w-[90%] w-full">
         <div class="w-full rounded-2xl bg-card">
           <div
             class="px-[30px] py-[20px] flex gap-[5px] border-b-[1px] border-white/10"
@@ -241,14 +284,16 @@
             <div class="w-[8px] h-[8px] bg-secondary rounded-full"></div>
             <div class="w-[8px] h-[8px] bg-secondary rounded-full"></div>
           </div>
-          <div class="px-[50px] flex flex-col gap-[30px] pt-[80px] pb-[50px]">
+          <div
+            class="sm:px-[50px] px-[20px] flex flex-col gap-[30px] sm:pt-[80px] pt-[30px] sm:pb-[50px] pb-[20px]"
+          >
             <div>
               <div class="flex items-center justify-between text-sm">
                 <p>Courtney Henry</p>
                 <p>214</p>
               </div>
               <div
-                class="w-full relative h-[13px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
+                class="w-full relative sm:h-[13px] h-[8px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
               >
                 <div
                   class="absolute left-0 top-0 h-full w-[90%] bg-primary"
@@ -261,7 +306,7 @@
                 <p>214</p>
               </div>
               <div
-                class="w-full relative h-[13px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
+                class="w-full relative sm:h-[13px] h-[8px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
               >
                 <div
                   class="absolute left-0 top-0 h-full w-[90%] bg-primary"
@@ -274,7 +319,7 @@
                 <p>214</p>
               </div>
               <div
-                class="w-full relative h-[13px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
+                class="w-full relative sm:h-[13px] h-[8px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
               >
                 <div
                   class="absolute left-0 top-0 h-full w-[90%] bg-primary"
@@ -287,7 +332,7 @@
                 <p>214</p>
               </div>
               <div
-                class="w-full relative h-[13px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
+                class="w-full relative sm:h-[13px] h-[8px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
               >
                 <div
                   class="absolute left-0 top-0 h-full w-[90%] bg-primary"
@@ -300,7 +345,7 @@
                 <p>214</p>
               </div>
               <div
-                class="w-full relative h-[13px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
+                class="w-full relative sm:h-[13px] h-[8px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
               >
                 <div
                   class="absolute left-0 top-0 h-full w-[90%] bg-primary"
@@ -313,7 +358,7 @@
                 <p>214</p>
               </div>
               <div
-                class="w-full relative h-[13px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
+                class="w-full relative sm:h-[13px] h-[8px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
               >
                 <div
                   class="absolute left-0 top-0 h-full w-[90%] bg-primary"
@@ -326,7 +371,7 @@
                 <p>214</p>
               </div>
               <div
-                class="w-full relative h-[13px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
+                class="w-full relative sm:h-[13px] h-[8px] mt-[20px] rounded-full overflow-hidden bg-[#1F1F1F]"
               >
                 <div
                   class="absolute left-0 top-0 h-full w-[90%] bg-primary"
@@ -338,11 +383,13 @@
       </div>
     </div>
     <div
-      class="px-[100px] mt-[150px] flex flex-row-reverse items-center gap-[100px]"
+      class="xl:px-[100px] lg:px-[50px] lg:flex-row-reverse flex-col px-[20px] sm:mt-[150px] mt-[50px] flex items-center gap-[100px]"
     >
-      <div class="w-[50%]">
-        <p class="text-6xl font-bold">Manage and Track Your Projects</p>
-        <p class="mt-7 mb-6 text-lg">
+      <div class="lg:w-[50%] sm:w-[80%] w-full">
+        <p class="lg:text-6xl sm:text-4xl text-2xl font-bold">
+          Manage and Track Your Projects
+        </p>
+        <p class="mt-7 mb-6 sm:text-lg text-base">
           Facilisis interdum nec, adipiscing feugiat aliquet pellentesque
           scelerisque augue. Tellus justo pulvinar quam molestie arcu magna
           morbi feugiat.
@@ -371,7 +418,7 @@
           </div>
         </div>
       </div>
-      <div class="w-[50%]">
+      <div class="lg:w-[50%] sm:w-[90%] w-full">
         <div class="w-full rounded-2xl bg-card">
           <div
             class="px-[30px] py-[20px] flex gap-[5px] border-b-[1px] border-white/10"
@@ -380,7 +427,9 @@
             <div class="w-[8px] h-[8px] bg-secondary rounded-full"></div>
             <div class="w-[8px] h-[8px] bg-secondary rounded-full"></div>
           </div>
-          <div class="px-[50px] flex flex-col gap-[30px] pt-[80px] pb-[50px]">
+          <div
+            class="sm:px-[50px] px-[20px] flex flex-col gap-[30px] sm:pt-[80px] pt-[20px] sm:pb-[50px] pb-[20px]"
+          >
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
                 <img
@@ -450,10 +499,14 @@
         </div>
       </div>
     </div>
-    <div class="px-[100px] mt-[150px] flex items-center gap-[100px]">
-      <div class="w-[50%]">
-        <p class="text-6xl font-bold">Manage and Track Your Projects</p>
-        <p class="mt-7 mb-6 text-lg">
+    <div
+      class="xl:px-[100px] lg:px-[50px] px-[20px] mt-[150px] flex lg:flex-row flex-col items-center gap-[100px]"
+    >
+      <div class="lg:w-[50%] sm:w-[80%] w-full">
+        <p class="lg:text-6xl sm:text-4xl text-2xl font-bold">
+          Manage and Track Your Projects
+        </p>
+        <p class="mt-7 mb-6 sm:text-lg text-base">
           Facilisis interdum nec, adipiscing feugiat aliquet pellentesque
           scelerisque augue. Tellus justo pulvinar quam molestie arcu magna
           morbi feugiat.
@@ -464,7 +517,7 @@
           Discover more features
         </button>
       </div>
-      <div class="w-[50%]">
+      <div class="lg:w-[50%] sm:w-[90%] w-full">
         <div class="w-full rounded-2xl bg-card">
           <div
             class="px-[30px] py-[20px] flex gap-[5px] border-b-[1px] border-white/10"
@@ -473,15 +526,21 @@
             <div class="w-[8px] h-[8px] bg-secondary rounded-full"></div>
             <div class="w-[8px] h-[8px] bg-secondary rounded-full"></div>
           </div>
-          <div class="px-[50px] pt-[50px] pb-[50px]">
+          <div
+            class="sm:px-[50px] px-[20px] sm:pt-[50px] pt-[20px] sm:pb-[50px] pb-[20px]"
+          >
             <div class="grid grid-cols-2 gap-5">
-              <div class="bg-[#202020] px-[30px] py-[20px] rounded-lg">
-                <p class="font-bold">Tasks Completed</p>
-                <p class="font-bold text-lg">280</p>
+              <div
+                class="bg-[#202020] sm:px-[30px] px-[20px] py-[20px] rounded-lg"
+              >
+                <p class="font-bold sm:text-base text-sm">Tasks Completed</p>
+                <p class="font-bold sm:text-lg">280</p>
               </div>
-              <div class="bg-[#202020] px-[30px] py-[20px] rounded-lg">
-                <p class="font-bold">Team Members</p>
-                <p class="font-bold text-lg">7</p>
+              <div
+                class="bg-[#202020] sm:px-[30px] px-[20px] py-[20px] rounded-lg"
+              >
+                <p class="font-bold sm:text-base text-sm">Team Members</p>
+                <p class="font-bold sm:text-lg">7</p>
               </div>
             </div>
             <div class="grid grid-cols-6 mt-[50px] h-[400px] gap-3">
@@ -526,7 +585,7 @@
         </div>
       </div>
     </div>
-    <div class="w-full h-[1px] bg-card my-[150px]"></div>
+    <div class="w-full h-[1px] bg-card sm:my-[150px] my-[50px]"></div>
     <div class="relative">
       <img
         class="absolute left-[30px] top-[50%] translate-y-[-50%]"
@@ -561,7 +620,7 @@
             alt=""
           />
         </div>
-        <p class="text-2xl font-light leading-[1.7] text-center">
+        <p class="sm:text-2xl text-base font-light leading-[1.7] text-center">
           "Power is a fantastic theme that gives you the ability to create truly
           stunning websites. It is apparent that a lot of thought and care went
           into the design and development of the template. Highly recommended."
@@ -569,8 +628,10 @@
         <p class="text-lg text-secondary">Bessie, Ethical Hacker</p>
       </div>
     </div>
-    <div class="w-full h-[1px] bg-card my-[150px]"></div>
-    <div class="px-[100px] grid grid-cols-3 gap-7">
+    <div class="w-full h-[1px] bg-card sm:my-[150px] my-[50px]"></div>
+    <div
+      class="xl:px-[100px] lg:px-[50px] px-[20px] grid lg:grid-cols-3 md:grid-cols-2 gap-7"
+    >
       <div class="bg-card rounded-3xl overflow-hidden">
         <img
           src="https://cdn.prod.website-files.com/62129b27434f411d04e408db/62129b27434f4163b2e40a00_01%20thumb%20(small).jpg"
@@ -609,71 +670,137 @@
       </div>
     </div>
     <div
-      class="mt-[160px] flex items-center gap-6 py-[30px] border-t-[1px] border-white/10"
+      class="mt-[160px] w-full overflow-hidden py-[30px] border-t-[1px] border-white/10"
     >
-      <div class="flex items-center gap-4 font-medium">
-        <img
-          src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
-          alt=""
-        />
-        <p>10 day free trial</p>
-      </div>
-      <div class="flex items-center gap-4 font-medium">
-        <img
-          src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
-          alt=""
-        />
-        <p>10 day free trial</p>
-      </div>
-      <div class="flex items-center gap-4 font-medium">
-        <img
-          src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
-          alt=""
-        />
-        <p>10 day free trial</p>
-      </div>
-      <div class="flex items-center gap-4 font-medium">
-        <img
-          src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
-          alt=""
-        />
-        <p>10 day free trial</p>
-      </div>
-      <div class="flex items-center gap-4 font-medium">
-        <img
-          src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
-          alt=""
-        />
-        <p>10 day free trial</p>
-      </div>
-      <div class="flex items-center gap-4 font-medium">
-        <img
-          src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
-          alt=""
-        />
-        <p>10 day free trial</p>
-      </div>
-      <div class="flex items-center gap-4 font-medium">
-        <img
-          src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
-          alt=""
-        />
-        <p>10 day free trial</p>
-      </div>
-      <div class="flex items-center gap-4 font-medium">
-        <img
-          src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
-          alt=""
-        />
-        <p>10 day free trial</p>
+      <div class="w-full flex slider relative">
+        <div class="flex-nowrap flex items-center gap-6">
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+        </div>
+        <div
+          class="flex-nowrap absolute lg:left-[140%] sm:left-[185%] left-[200%] flex items-center gap-6"
+        >
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+          <div class="flex shrink-0 items-center gap-4 font-medium">
+            <img
+              src="https://cdn.prod.website-files.com/62129b27434f4161e0e408ae/62129b27434f41a9f4e4092c_logo%20small.svg"
+              alt=""
+            />
+            <p>10 day free trial</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="py-[150px] bg-[#181818]">
-      <div class="w-[50%] text-center mx-auto">
+    <div class="sm:py-[150px] py-[60px] bg-[#181818]">
+      <div class="xl:w-[50%] lg:w-[70%] w-[85%] text-center mx-auto">
         <p class="text-lg text-secondary">
           Loaded with tons of premade components
         </p>
-        <h1 class="text-6xl mt-[10px] mb-[50px] font-bold">
+        <h1
+          class="lg:text-6xl sm:text-5xl text-2xl mt-[10px] mb-[50px] font-bold"
+        >
           Build a powerful website for your startup.
         </h1>
         <button
@@ -683,8 +810,10 @@
         </button>
       </div>
     </div>
-    <div class="py-[100px]">
-      <div class="grid px-[100px] grid-cols-4 gap-[20px]">
+    <div class="lg:py-[100px] py-[50px]">
+      <div
+        class="grid xl:px-[100px] lg:px-[50px] sm:text-base text-sm px-[20px] lg:grid-cols-4 grid-cols-2 lg:gap-y-0 gap-y-10 gap-[20px]"
+      >
         <div>
           <p class="uppercase text-secondary font-bold">company</p>
           <ul class="mt-[20px] flex flex-col gap-3">
@@ -767,7 +896,7 @@
         </div>
       </div>
       <div
-        class="flex px-[100px] items-center justify-between py-[30px] border-t-[1px] border-white/10 mt-[150px]"
+        class="flex xl:px-[100px] lg:px-[50px] px-[20px] md:flex-row flex-col md:items-center justify-between py-[30px] border-t-[1px] border-white/10 lg:mt-[150px] mt-[60px]"
       >
         <p>Powered By Webflow</p>
         <p>© Template by Leonardo Mattar</p>
