@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header {
+        color: red;
+        text-decoration: underline;
+      }
+      .description {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>
+      <h1 class="header">Lorem ipsum dolor sit amet.</h1>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, vel sint
+        harum porro laboriosam nobis corrupti sed alias tempora accusamus.
+      </p>
+    </div> -->
+
+    <h1 id="heading">Lorem ipsum dolor sit amet.</h1>
+    <button id="delete-btn">Delete Heading</button>
+    <script>
+      let heading = document.getElementById("heading");
+      let deleteBtn = document.getElementById("delete-btn");
+      const cloneHeading = heading.cloneNode(true);
+      console.log(cloneHeading);
+      deleteBtn.addEventListener("click", function () {});
+      // DOM
+      // Document Object Model
+      //getElementById
+      //getElementsByTagName
+      //getElementsByClassName
+      //querySelector
+      //querySelectorAll
+      //parentNode
+      //parentElement
+      //childNodes
+      //firstChild
+      //lastChild
+      //firstElementChild
+      //lastElementChild
+      //nextSibling
+      //nextElementSibling
+      //previousSibling
+      //previousElementSibling
+
+      //eventlistener
+      //create html element in js and append it to the dom && remove && clone
+      // todo App
+
+      //createElement
+    </script>
+  </body>
+</html>
