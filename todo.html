@@ -84,30 +84,30 @@
 
       <div class="input-section">
         <input type="text" id="todoInput" placeholder="Enter your task..." />
-        <button>Add Task</button>
+        <button id="addTask">Add Task</button>
       </div>
 
-      <div class="todo-list">
-        <div class="todo-item completed">
-          <span>Buy groceries</span>
-          <div class="actions">
-            <button class="complete">Complete</button>
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
-          </div>
-        </div>
-        <div class="todo-item">
-          <span>Complete homework</span>
-          <div class="actions">
-            <button class="complete">Complete</button>
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
-          </div>
-        </div>
-      </div>
+      <div class="todo-list"></div>
     </div>
     <script>
+      let todos = [];
       //TODO :when click on add task button  , we have to create
+      const addTaskButton = document.getElementById("addTask");
+      const todoInput = document.getElementById("todoInput");
+      const todoList = document.querySelector(".todo-list");
+
+      addTaskButton.addEventListener("click", function () {
+        let todoText = todoInput.value.trim();
+        if (!todoText) return;
+        const todoItem = {
+          text: todoText,
+          isCompleted: false,
+        };
+
+        todos.push(todoItem);
+        todoInput.value = "";
+        showTodos();
+      });
       //   <div class="todo-item">
       //       <span>Complete homework</span>
       //       <div class="actions">
@@ -116,6 +116,57 @@
       //         <button class="delete">Delete</button>
       //       </div>
       //     </div>
+
+      function showTodos() {
+        todoList.innerHTML = "";
+        for (let i = 0; i < todos.length; i++) {
+          const divElement = document.createElement("div");
+          divElement.classList.add("todo-item");
+          if (todos[i].isCompleted) {
+            divElement.classList.add("completed");
+          }
+          const spanElement = document.createElement("span");
+          spanElement.innerText = todos[i].text;
+          const actionsElement = document.createElement("div");
+          actionsElement.classList.add("actions");
+          const completeButton = document.createElement("button");
+          completeButton.classList.add("complete");
+          if (todos[i].isCompleted) {
+            completeButton.innerText = "UnComplete";
+          } else {
+            completeButton.innerText = "Complete";
+          }
+          completeButton.addEventListener("click", function () {
+            if (todos[i].isCompleted) {
+              todos[i].isCompleted = false;
+            } else {
+              todos[i].isCompleted = true;
+            }
+            showTodos();
+          });
+          const editButton = document.createElement("button");
+          editButton.classList.add("edit");
+          editButton.innerText = "Edit";
+          editButton.addEventListener("click", function () {
+            const editText = prompt("Edit Todo", todos[i].text);
+            todos[i].text = editText;
+            showTodos();
+          });
+          const deleteButton = document.createElement("button");
+          deleteButton.classList.add("delete");
+          deleteButton.innerText = "Delete";
+          deleteButton.addEventListener("click", function () {
+            todos.splice(i, 1);
+            showTodos();
+          });
+          divElement.appendChild(spanElement);
+          actionsElement.appendChild(completeButton);
+          actionsElement.appendChild(editButton);
+          actionsElement.appendChild(deleteButton);
+          divElement.appendChild(actionsElement);
+          todoList.appendChild(divElement);
+        }
+      }
 
       //TODO : add in todo list
 
